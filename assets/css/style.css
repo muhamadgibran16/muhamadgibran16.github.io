@@ -81,7 +81,7 @@ a {
   /* justify-content: center; */
   min-height: 100vh;
   width: 100%;
-  margin: auto;
+  /* margin: auto; */
   /* overflow: auto; */
   color: var(--light);
 }
@@ -255,14 +255,12 @@ aside .sidebar {
   height: 100%;
   background: var(--dark);
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
-  /* flex-direction: column; */
   align-items: center;
   position: fixed;
   order: 2;
   box-shadow: 0px 0px 1rem 0px var(--secondary);
-  /* overflow: auto; */
+  overflow: auto;
   /* top: 0;
   left: 0; */
   /* z-index: 1; */
@@ -322,6 +320,7 @@ aside .sidebar .nav {
 aside .sidebar .nav li {
   margin-bottom: 20px;
   display: flex;
+  /* justify-content: center; */
   align-items: center;
   color: var(--grey);
   /* justify-content: space-around; */
@@ -342,9 +341,9 @@ aside .sidebar .nav li a.active {
   color: var(--accent);
 }
 
-/* aside .sidebar .nav li a i {
-  margin-right: 15px;
-} */
+aside .sidebar .nav li a i {
+  margin-right: 20px;
+}
 
 aside .sidebar .toggler {
   display: flex;
@@ -563,16 +562,16 @@ aside .sidebar .toggler span::after {
   aside .sidebar {
     padding: 0;
     margin: 0;
-    order: 1;
+    order: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 70px;
     background: var(--dark);
-    z-index: 1000;
+    z-index: 1;
   }
 
   aside .sidebar .nav {
@@ -590,6 +589,7 @@ aside .sidebar .toggler span::after {
   }
 
   aside .sidebar .nav li {
+    /* position: fixed; */
     margin: 0;
     padding: 0;
     display: flex;
@@ -605,6 +605,21 @@ aside .sidebar .toggler span::after {
 
   aside .sidebar .nav li a {
     padding: 5px 7px;
+    flex-direction: row;
+  }
+
+  i.beranda,
+  i.tentang {
+    margin-left: 7px;
+  }
+
+  i.layanan {
+    margin-left: 13px;
+  }
+  
+  i.proyek,
+  i.kontak {
+    margin-left: 10px;
   }
 
   aside .sidebar .nav li a span {
