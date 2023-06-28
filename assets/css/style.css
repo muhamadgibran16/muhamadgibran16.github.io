@@ -260,14 +260,12 @@ aside.sidebar {
   flex-direction: column;
   align-items: center;
   position: fixed;
-  overflow: auto;
+  /* overflow: auto; */
   top: 0;
   left: 0;
   z-index: 1;
   box-shadow: 0px 0px 1rem 0px var(--secondary);
 }
-
-
 
 aside.sidebar .logo {
   position: absolute;
@@ -420,7 +418,6 @@ aside.sidebar .toggler span::after {
 
 .home .hero {
   padding: 0 2rem;
-  /* margin-bottom: 1rem; */
 }
 
 .home .intro {
@@ -471,23 +468,20 @@ aside.sidebar .toggler span::after {
 
 
 @media only screen and (max-width: 1000px) {
-  aside.sidebar {
-    width: 0px;
+  /* aside.sidebar {
+    width: 0%;
     padding: 0;
     clear: both;
-  }
+  } */
 
   .toggler {
     display: show;
   }
 
-  section {
-    /* padding: 0; */
+  /* section {
     top: 0;
     left: 0;
-    /* margin: 0; */
-    /* padding: 0; */
-  }
+  } */
 }
 
 @media only screen and (max-width: 768px) {
@@ -497,10 +491,6 @@ aside.sidebar .toggler span::after {
 
   .container {
     background: none;
-  }
-
-  .row {
-    flex-direction: column;
   }
 
   .border-animate {
@@ -522,6 +512,10 @@ aside.sidebar .toggler span::after {
 @media only screen and (max-width: 528px) {
   body {
     font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
   }
 
   .border-animate {
@@ -559,27 +553,26 @@ aside.sidebar .toggler span::after {
 
   .item:nth-child(1) {
     order: 2;
-    /* Mengatur urutan elemen pertama menjadi urutan kedua */
   }
 
   .order:nth-child(2) {
     order: 1;
-    /* Mengatur urutan elemen kedua menjadi urutan pertama */
   }
 
   aside.sidebar {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: row;
     position: fixed;
     bottom: 0;
     z-index: 1000;
     width: 100%;
     height: 80px;
-    background: #000;
-    /* margin-top: 43rem; */
+    margin-top: 38rem;
     background: var(--dark);
     z-index: 1000;
+    position: relative;
   }
 
   aside.sidebar .nav {
