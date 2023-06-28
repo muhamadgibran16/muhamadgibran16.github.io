@@ -50,7 +50,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: none;
+  /* outline: none; */
 }
 
 html,
@@ -60,7 +60,7 @@ body {
   font-size: 16px;
   font-family: "Noto Serif", serif;
   scroll-behavior: smooth;
-  overflow: hidden;
+  /* overflow: hidden; */
   line-height: 1.5;
   letter-spacing: 1.5px;
 }
@@ -82,7 +82,7 @@ a {
   min-height: 100vh;
   width: 100%;
   margin: auto;
-  overflow: auto;
+  /* overflow: auto; */
   color: var(--light);
 }
 
@@ -250,34 +250,35 @@ section {
   -webkit-filter: blur(50px);
 }
 
-aside.sidebar {
+aside .sidebar {
   width: 270px;
   height: 100%;
   background: var(--dark);
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   position: fixed;
-  /* overflow: auto; */
-  top: 0;
-  left: 0;
-  z-index: 1;
+  order: 2;
   box-shadow: 0px 0px 1rem 0px var(--secondary);
+  /* overflow: auto; */
+  /* top: 0;
+  left: 0; */
+  /* z-index: 1; */
 }
 
-aside.sidebar .logo {
+aside .sidebar .logo {
+  align-items: center;
   position: absolute;
   padding: 0.5rem 1rem;
   top: 50px;
   font-size: 2rem;
   color: var(--light);
   text-transform: capitalize;
-  background: var(--dark);
 }
 
-aside.sidebar .logo a {
+aside .sidebar .logo a {
   font-weight: 700;
   padding: 1rem;
   /* font-size: 2rem; */
@@ -287,12 +288,12 @@ aside.sidebar .logo a {
 
 }
 
-aside.sidebar .logo a span {
+aside .sidebar .logo a span {
   font-family: "Italianno", cursive;
   text-decoration: none;
 }
 
-aside.sidebar .logo a::before {
+aside .sidebar .logo a::before {
   content: '';
   position: absolute;
   width: 40px;
@@ -303,7 +304,7 @@ aside.sidebar .logo a::before {
   left: 0;
 }
 
-aside.sidebar .logo a::after {
+aside .sidebar .logo a::after {
   content: '';
   position: absolute;
   width: 40px;
@@ -314,11 +315,11 @@ aside.sidebar .logo a::after {
   right: 0;
 }
 
-aside.sidebar .nav {
+aside .sidebar .nav {
   margin-top: 15px;
 }
 
-aside.sidebar .nav li {
+aside .sidebar .nav li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -328,7 +329,7 @@ aside.sidebar .nav li {
   /* flex-direction: row; */
 }
 
-aside.sidebar .nav li a {
+aside .sidebar .nav li a {
   font-size: 1rem;
   font-weight: 600;
   display: block;
@@ -336,16 +337,16 @@ aside.sidebar .nav li a {
   padding: 5px 15px;
 }
 
-aside.sidebar .nav li.active,
-aside.sidebar .nav li a.active {
+aside .sidebar .nav li.active,
+aside .sidebar .nav li a.active {
   color: var(--accent);
 }
 
-/* aside.sidebar .nav li a i {
+/* aside .sidebar .nav li a i {
   margin-right: 15px;
 } */
 
-aside.sidebar .toggler {
+aside .sidebar .toggler {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,7 +366,7 @@ aside.sidebar .toggler {
   display: none;
 }
 
-aside.sidebar .toggler span {
+aside .sidebar .toggler span {
   margin: 2px;
   height: 2px;
   width: 20px;
@@ -381,7 +382,7 @@ aside.sidebar .toggler span {
   -o-border-radius: 2px;
 }
 
-aside.sidebar .toggler span::before {
+aside .sidebar .toggler span::before {
   content: "";
   height: 2px;
   width: 20px;
@@ -393,7 +394,7 @@ aside.sidebar .toggler span::before {
   top: -6px;
 }
 
-aside.sidebar .toggler span::after {
+aside .sidebar .toggler span::after {
   content: "";
   height: 2px;
   width: 20px;
@@ -468,15 +469,11 @@ aside.sidebar .toggler span::after {
 
 
 @media only screen and (max-width: 1000px) {
-  /* aside.sidebar {
+  /* aside .sidebar {
     width: 0%;
     padding: 0;
     clear: both;
   } */
-
-  .toggler {
-    display: show;
-  }
 
   /* section {
     top: 0;
@@ -485,9 +482,9 @@ aside.sidebar .toggler span::after {
 }
 
 @media only screen and (max-width: 768px) {
-  section {
+  /* section {
     left: 0;
-  }
+  } */
 
   .container {
     background: none;
@@ -512,6 +509,10 @@ aside.sidebar .toggler span::after {
 @media only screen and (max-width: 528px) {
   body {
     font-size: 14px;
+  }
+
+  section {
+    left: 0;
   }
 
   .container {
@@ -559,23 +560,29 @@ aside.sidebar .toggler span::after {
     order: 1;
   }
 
-  aside.sidebar {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    bottom: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 80px;
-    margin-top: 38rem;
+  aside {
     background: var(--dark);
-    z-index: 1000;
-    position: relative;
+    bottom: 0;
+    top: 1rem;
+    height: 70px;
   }
 
-  aside.sidebar .nav {
+  aside .sidebar {
+    padding: 0;
+    margin: 0;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: var(--dark);
+    z-index: 1000;
+  }
+
+  aside .sidebar .nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -586,9 +593,10 @@ aside.sidebar .toggler span::after {
     margin: 0;
     left: 0;
     justify-content: space-around;
+    /* z-index: 1000; */
   }
 
-  aside.sidebar .nav li {
+  aside .sidebar .nav li {
     margin: 0;
     padding: 0;
     display: flex;
@@ -598,15 +606,15 @@ aside.sidebar .toggler span::after {
     border-bottom: none;
   }
 
-  aside.sidebar .nav li {
+  aside .sidebar .nav li {
     padding: 0;
   }
 
-  aside.sidebar .nav li a {
+  aside .sidebar .nav li a {
     padding: 5px 7px;
   }
 
-  aside.sidebar .nav li a span {
+  aside .sidebar .nav li a span {
     margin: 0;
     padding: 0;
     display: flex;
@@ -617,7 +625,15 @@ aside.sidebar .toggler span::after {
     display: block;
   }
 
-  aside.sidebar .logo {
+  aside .sidebar .logo {
     display: none;
+  }
+
+  #navbar {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
   }
 }
