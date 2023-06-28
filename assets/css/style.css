@@ -261,9 +261,9 @@ aside .sidebar {
   order: 2;
   box-shadow: 0px 0px 1rem 0px var(--secondary);
   overflow: auto;
-  /* top: 0;
-  left: 0; */
-  /* z-index: 1; */
+  /* top: 0; */
+  left: 0;
+  z-index: 1;
 }
 
 aside .sidebar .logo {
@@ -315,6 +315,8 @@ aside .sidebar .logo a::after {
 
 aside .sidebar .nav {
   margin-top: 15px;
+  position: absolute;
+  position: absolute;
 }
 
 aside .sidebar .nav li {
@@ -581,15 +583,16 @@ aside .sidebar .toggler span::after {
     width: 100%;
     height: fit-content;
     position: fixed;
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
     left: 0;
     justify-content: space-around;
-    /* z-index: 1000; */
+    z-index: 1;
+    padding-left: 10px;
+
   }
 
   aside .sidebar .nav li {
-    /* position: fixed; */
     margin: 0;
     padding: 0;
     display: flex;
@@ -599,13 +602,11 @@ aside .sidebar .toggler span::after {
     border-bottom: none;
   }
 
-  aside .sidebar .nav li {
-    padding: 0;
-  }
 
   aside .sidebar .nav li a {
     padding: 5px 7px;
     flex-direction: row;
+    z-index: 1;
   }
 
   i.beranda,
@@ -616,10 +617,10 @@ aside .sidebar .toggler span::after {
   i.layanan {
     margin-left: 13px;
   }
-  
+
   i.proyek,
   i.kontak {
-    margin-left: 10px;
+    margin-left: 12px;
   }
 
   aside .sidebar .nav li a span {
